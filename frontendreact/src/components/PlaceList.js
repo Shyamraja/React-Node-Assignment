@@ -19,7 +19,7 @@ const PlaceList =() =>{
     return(
         <div className="container">
         <h1>Helsinki Places</h1>
-        <div className="location-cards">
+        <div className="place-cards">
             <div>
                 {location.map((place) => (
                 <Place key={place.id} name={place.name.en} isOpen={true} address= {place.location.address.street_address} />

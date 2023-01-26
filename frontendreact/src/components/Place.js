@@ -1,21 +1,31 @@
-import Card from 'react-bootstrap/Card';
+import React, { useState } from 'react';
+import { 
+  Card, CardText, CardBody,
+  CardTitle, CardSubtitle
+} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./styles/card.css"
-<script src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js" crossorigin></script>
 
-function Place({name, address, isOpen}) {
+const Place = ({place,
+  name,
+  address,
+  isOpen}) =>{
+
   return (
+  <div>
+
     <Card>
-   
-      <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">{address}</Card.Subtitle>
-        <Card.Text>
+     <div className="card-container"></div>
+      <CardBody>
+        <CardTitle>{name}</CardTitle>
+        <CardSubtitle>{address}</CardSubtitle>
+        <CardText>
         {isOpen ? "Open" : "Closed"}
-        </Card.Text>
-       
-      </Card.Body>
+        </CardText>    
+      </CardBody>
     </Card>
+
+</div>
   );
 }
 

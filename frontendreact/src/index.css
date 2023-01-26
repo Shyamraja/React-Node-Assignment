@@ -1,16 +1,9 @@
+.place-cards {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 2fr) );
+}
 h1 {
-  color: green;
+  color: blue;
   font-style: normal;
-}
-li {
-  color: black;
-  padding-top: 3px;
-  font-size: 15px;
-  margin-left: 20px;
-}
-ul {
-  font-size: 2pc;
-}
-.places {
-  border: 1px solid rgb(30, 39, 84);
 }

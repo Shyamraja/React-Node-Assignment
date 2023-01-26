@@ -1,5 +1,8 @@
+import React from 'react';
 import axios from "axios";
 import { useState, useEffect } from "react";
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
 import PlaceList from "./components/PlaceList";
 
 
