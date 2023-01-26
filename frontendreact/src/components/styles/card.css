@@ -1,14 +1,11 @@
-.card {
-  display: flex;
- }
 .card-container{
   width: 100%;
-  min-height: 100px;
+  min-height: 200px;
   background-color:azure;
   display: flex;
   justify-content: center;
   align-items: centre;    
  }
-    
+ 
  
  

@@ -4,7 +4,8 @@ import Place from "./Place";
 
 const PlaceList =() =>{
 
-    const [location,setLocation]= useState([]);
+    const [place,setPlace]= useState([]);
+    
     useEffect(()=>{
       axios.get("http://localhost:3001/",{
         params: {
@@ -12,19 +13,17 @@ const PlaceList =() =>{
         }
       })
       .then((res)=>{
-        setLocation(res.data.data)})
+        setPlace(res.data.data)})
       .catch(e=>alert('error'))
     },[])
-   
+
     return(
         <div className="container">
         <h1>Helsinki Places</h1>
         <div className="place-cards">
-            <div>
-                {location.map((place) => (
+                {place.map((place, i) => (
                 <Place key={place.id} name={place.name.en} isOpen={true} address= {place.location.address.street_address} />
             ))}
-             </div>
         </div>
     </div>
     );
